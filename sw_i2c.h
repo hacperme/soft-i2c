@@ -34,8 +34,10 @@ typedef struct sw_i2c_s {
 
 /* functions */
 void SW_I2C_initial(sw_i2c_t *d);
+uint8_t SW_I2C_Read(sw_i2c_t *d, uint8_t IICID, uint8_t *pdata, uint8_t rcnt);
 uint8_t SW_I2C_Read_8addr(sw_i2c_t *d, uint8_t IICID, uint8_t regaddr, uint8_t *pdata, uint8_t rcnt);
 uint8_t SW_I2C_Read_16addr(sw_i2c_t *d, uint8_t IICID, uint16_t regaddr, uint8_t *pdata, uint8_t rcnt);
+uint8_t SW_I2C_Write(sw_i2c_t *d, uint8_t IICID, uint8_t *pdata, uint8_t rcnt);
 uint8_t SW_I2C_Write_8addr(sw_i2c_t *d, uint8_t IICID, uint8_t regaddr, uint8_t *pdata, uint8_t rcnt);
 uint8_t SW_I2C_Write_16addr(sw_i2c_t *d, uint8_t IICID, uint16_t regaddr, uint8_t *pdata, uint8_t rcnt);
 uint8_t SW_I2C_Check_SlaveAddr(sw_i2c_t *d, uint8_t IICID);
